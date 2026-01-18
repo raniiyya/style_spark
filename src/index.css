@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Pinyon+Script&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-sans-body: "Mona Sans", ui-sans-serif, system-ui;
+  --font-sans-display: "Mona Sans", ui-sans-serif, system-ui;
+  --font-serif-display: "Mona Sans", ui-serif, Georgia;
+  --font-script: "Pinyon Script", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans-body text-charcoal-900 bg-cream-50;
+    line-height: 1.6;
+  }
+
+  code {
+    @apply font-mono;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif-display;
+  }
+
+  .script-text {
+    @apply font-script;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-charcoal-900 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-charcoal-800 hover:shadow-lg tracking-wide;
+  }
+
+  .btn-secondary {
+    @apply bg-cream-50 text-charcoal-900 border-2 border-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 tracking-wide;
+  }
+
+  .card {
+    @apply bg-cream-50 shadow-lg border border-cream-300 p-8 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-8 xl:px-0;
+  }
+
+  .heading-luxury {
+    @apply font-serif-display font-bold text-charcoal-900 tracking-tight;
+  }
+
+  .subheading-luxury {
+    @apply font-sans-display font-semibold uppercase tracking-wider text-charcoal-700;
+  }
+
+  .body-luxury {
+    @apply font-sans-body text-charcoal-600 leading-relaxed;
+  }
+}
