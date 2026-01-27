@@ -72,7 +72,7 @@ const StyleModal = ({ isOpen, onClose, style }) => {
 										<div key={index} className='break-inside-avoid mb-4'>
 											<div className='bg-gray-100 rounded-xl overflow-hidden shadow-lg'>
 												<img
-													src={`${process.env.PUBLIC_URL}${image}`}
+													src={`${process.env.PUBLIC_URL}/public${image}`}
 													alt={`Style inspiration ${index + 1}`}
 													className='w-full object-cover'
 												/>

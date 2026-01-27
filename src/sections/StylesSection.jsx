@@ -42,7 +42,7 @@ const StylesSection = () => {
 										{[0, 1, 2].map((_, i) => (
 											<img
 												key={i}
-												src={`${process.env.PUBLIC_URL}${style.images[i]}`}
+												src={`${process.env.PUBLIC_URL}/public${style.images[i]}`}
 												alt={style.name + ' image'}
 												className='h-full object-cover'
 											/>
